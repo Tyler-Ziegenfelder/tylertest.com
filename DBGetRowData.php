@@ -25,7 +25,7 @@ class DBGetRowData{
     {
         while($row = $response->fetch_assoc()) {
             if ($this->file_id == $row['file_id']){
-                $tempvar = new DBInterfaceRow($row['row_id'],$row['file_id'],$row['number'],$row['font_weight'],$row['font_size'],$row['horizontal_alignment']);
+                $tempvar = new DBInterfaceRow($row['id'],$row['file_id'],$row['number'],$row['font_weight'],$row['font_size'],$row['horizontal_alignment']);
                 if (empty($this->row_data)){
                     $this->row_data = array($tempvar);
                 }
