@@ -27,7 +27,7 @@ class DBGetFileData{
     {
         while($row = $response->fetch_assoc()) {
             if ($this->id == $row['id']){
-                $tempvar = new DBInterfaceFile($row['id'],$row['hold_time'],$row['scroll_speed'],$row['vertical'],$row['mode']);
+                $tempvar = new DBInterfaceFile($row['id'],$row['hold_time'],$row['scroll_speed'],$row['vertical_alignment'],$row['mode']);
                 if (empty($this->files)){
                     $this->files = array($tempvar);
                     break;
